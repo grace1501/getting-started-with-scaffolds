@@ -48,7 +48,7 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    the_id = params.fetch("path_id")
+    the_id = params.fetch("id")
     the_movie = Movie.where({ :id => the_id })[0]
 
     the_movie.destroy
